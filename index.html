@@ -1,62 +1,679 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cazare Bragadiru | Camere de inchiriat</title>
-    <meta name="description" content="Cazare in Bragadiru – camere confortabile, preturi accesibile. Rezerva rapid!">
-    
-    <!-- Basic styling -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            padding: 50px 20px;
-        }
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #0077cc;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 1em;
-        }
-        .btn:hover {
-            background: #005fa3;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cazare Bragadiru | Camere de închiriat aproape de București</title>
+  <meta name="description" content="Cazare în Bragadiru, camere curate și confortabile, ideale pentru sejur scurt sau lung. Rezervare rapidă prin telefon sau WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Cazare Bragadiru" />
+  <meta name="theme-color" content="#1f4b99" />
+  <link rel="canonical" href="https://cazarebragadiru.ro/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:title" content="Cazare Bragadiru | Camere de închiriat aproape de București" />
+  <meta property="og:description" content="Rezervă rapid cazare în Bragadiru. Camere confortabile, locație convenabilă, acces facil către București." />
+  <meta property="og:url" content="https://cazarebragadiru.ro/" />
+  <meta property="og:site_name" content="Cazare Bragadiru" />
+  <meta property="og:image" content="https://cazarebragadiru.ro/images/hero.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cazare Bragadiru" />
+  <meta name="twitter:description" content="Camere de închiriat în Bragadiru, rezervare rapidă." />
+  <meta name="twitter:image" content="https://cazarebragadiru.ro/images/hero.jpg" />
+
+  <style>
+    :root {
+      --primary: #1f4b99;
+      --primary-dark: #173a76;
+      --accent: #e6f0ff;
+      --text: #1c2430;
+      --muted: #5f6b7a;
+      --bg: #f7f9fc;
+      --white: #ffffff;
+      --border: #dce3ee;
+      --shadow: 0 10px 30px rgba(22, 34, 51, 0.08);
+      --radius: 16px;
+      --max-width: 1140px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .topbar .container {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar a {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    header {
+      background: linear-gradient(rgba(20, 37, 66, 0.6), rgba(20, 37, 66, 0.6)),
+                  url("images/hero.jpg") center/cover no-repeat;
+      color: #fff;
+    }
+
+    nav {
+      padding: 18px 0;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 64px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 0 24px;
+      color: #eef4ff;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .booking-card {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--text);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 24px;
+      color: var(--primary-dark);
+    }
+
+    .booking-list {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .booking-box {
+      background: var(--accent);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin: 0 0 10px;
+      color: var(--primary-dark);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 22px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+      font-size: 20px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .rooms {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .room-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .room-content {
+      padding: 20px;
+    }
+
+    .room-title {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: var(--primary-dark);
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 10px 0 14px;
+    }
+
+    .room-content ul {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .location-grid,
+    .contact-grid,
+    .seo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .map-placeholder {
+      min-height: 320px;
+      background: linear-gradient(135deg, #dbe8ff, #f8fbff);
+      border: 1px dashed #aac0ea;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+    }
+
+    .cta {
+      background: var(--primary-dark);
+      color: #fff;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .cta p {
+      color: #e7efff;
+    }
+
+    footer {
+      background: #12233f;
+      color: #d8e2f5;
+      padding: 28px 0;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .badge {
+      background: #eef4ff;
+      color: var(--primary-dark);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .features,
+      .rooms,
+      .location-grid,
+      .contact-grid,
+      .seo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 48px 0 56px;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Cazare Bragadiru",
+    "url": "https://cazarebragadiru.ro/",
+    "telephone": "+40 700 000 000",
+    "email": "contact@cazarebragadiru.ro",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Exemplu 10",
+      "addressLocality": "Bragadiru",
+      "addressRegion": "Ilfov",
+      "postalCode": "077025",
+      "addressCountry": "RO"
+    },
+    "image": [
+      "https://cazarebragadiru.ro/images/hero.jpg",
+      "https://cazarebragadiru.ro/images/camera-standard.jpg",
+      "https://cazarebragadiru.ro/images/camera-family.jpg"
+    ],
+    "priceRange": "$$",
+    "description": "Cazare în Bragadiru cu camere confortabile, acces rapid către București și rezervare directă prin telefon sau WhatsApp."
+  }
+  </script>
 </head>
 <body>
 
-<div class="container">
-    <h1>Cazare în Bragadiru</h1>
-    <p>Camere confortabile, ideale pentru ședere pe termen scurt sau lung.</p>
+  <div class="topbar">
+    <div class="container">
+      <div>Cazare în Bragadiru • Rezervare rapidă • Aproape de București</div>
+      <div>
+        Telefon: <a href="tel:+40700000000">+40 700 000 000</a> |
+        WhatsApp: <a href="https://wa.me/40700000000">Scrie acum</a>
+      </div>
+    </div>
+  </div>
 
-    <a href="tel:+40700000000" class="btn">Sună pentru rezervare</a>
-</div>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-wrap">
+          <a class="brand" href="/">Cazare Bragadiru</a>
+          <div class="menu">
+            <a href="#camere">Camere</a>
+            <a href="#facilitati">Facilități</a>
+            <a href="#locatie">Locație</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
 
-<footer>
-    © 2026 Cazare Bragadiru. Toate drepturile rezervate.
-</footer>
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <h1>Cazare Bragadiru, camere confortabile la câteva minute de București</h1>
+            <p>
+              Oferim cazare în Bragadiru pentru persoane aflate în tranzit, muncă sau sejur scurt.
+              Camere curate, acces facil, rezervare simplă și comunicare directă.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="tel:+40700000000">Sună pentru rezervare</a>
+              <a class="btn btn-secondary" href="https://wa.me/40700000000">Rezervă pe WhatsApp</a>
+            </div>
+
+            <div class="badge-row">
+              <span class="badge">Rezervare directă</span>
+              <span class="badge">Prețuri accesibile</span>
+              <span class="badge">Locație convenabilă</span>
+              <span class="badge">Ideal pentru muncitori și tranzit</span>
+            </div>
+          </div>
+
+          <aside class="booking-card">
+            <h2>Rezervare rapidă</h2>
+            <div class="booking-box">Răspuns rapid la telefon și WhatsApp</div>
+            <ul class="booking-list">
+              <li>Check-in flexibil, în funcție de disponibilitate</li>
+              <li>Camere pentru 1, 2 sau mai multe persoane</li>
+              <li>Sejururi scurte sau perioade mai lungi</li>
+            </ul>
+            <a class="btn btn-primary" href="tel:+40700000000" style="width:100%; text-align:center;">Apelează acum</a>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="facilitati">
+      <div class="container">
+        <h2>De ce să alegi cazare în Bragadiru</h2>
+        <p class="section-intro">
+          Pagina este structurată pentru a evidenția clar oferta de cazare în Bragadiru și avantajele locației,
+          atât pentru vizitatori, cât și pentru motoarele de căutare.
+        </p>
+
+        <div class="features">
+          <div class="card">
+            <h3>Camere curate</h3>
+            <p>Spații îngrijite, potrivite pentru odihnă și șederi confortabile.</p>
+          </div>
+          <div class="card">
+            <h3>Acces rapid</h3>
+            <p>Locație cu acces facil către București și zonele din apropiere.</p>
+          </div>
+          <div class="card">
+            <h3>Rezervare directă</h3>
+            <p>Fără pași complicați. Ne contactezi direct și primești confirmarea rapid.</p>
+          </div>
+          <div class="card">
+            <h3>Preț convenabil</h3>
+            <p>O soluție practică pentru sejururi scurte, delegații sau muncă în zonă.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="camere">
+      <div class="container">
+        <h2>Camere disponibile</h2>
+        <p class="section-intro">
+          Prezintă clar tipurile de camere. Poți păstra această secțiune simplă sau o poți extinde ulterior
+          cu galerii, disponibilitate și formulare.
+        </p>
+
+        <div class="rooms">
+          <article class="room-card">
+            <img src="images/camera-standard.jpg" alt="Cameră standard pentru cazare în Bragadiru" />
+            <div class="room-content">
+              <h3 class="room-title">Cameră standard</h3>
+              <p>Potrivită pentru 1–2 persoane, ideală pentru șederi scurte.</p>
+              <div class="price">de la 150 lei/noapte</div>
+              <ul>
+                <li>Pat confortabil</li>
+                <li>TV și Wi-Fi</li>
+                <li>Baie proprie sau comună</li>
+              </ul>
+              <a class="btn btn-primary" href="tel:+40700000000">Rezervă acum</a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="images/camera-dubla.jpg" alt="Cameră dublă în Bragadiru" />
+            <div class="room-content">
+              <h3 class="room-title">Cameră dublă</h3>
+              <p>Confort sporit pentru cupluri sau două persoane.</p>
+              <div class="price">de la 180 lei/noapte</div>
+              <ul>
+                <li>Pat matrimonial sau paturi separate</li>
+                <li>Aer condiționat</li>
+                <li>Spațiu generos</li>
+              </ul>
+              <a class="btn btn-primary" href="tel:+40700000000">Solicită ofertă</a>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <img src="images/camera-family.jpg" alt="Cameră pentru mai multe persoane în Bragadiru" />
+            <div class="room-content">
+              <h3 class="room-title">Cameră pentru grup</h3>
+              <p>Recomandată pentru echipe, muncitori sau șederi mai lungi.</p>
+              <div class="price">preț la cerere</div>
+              <ul>
+                <li>Capacitate extinsă</li>
+                <li>Condiții avantajoase</li>
+                <li>Disponibilitate flexibilă</li>
+              </ul>
+              <a class="btn btn-primary" href="https://wa.me/40700000000">Contact pe WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="locatie">
+      <div class="container">
+        <h2>Locație avantajoasă în Bragadiru</h2>
+        <p class="section-intro">
+          Pentru SEO local, este important să menționezi clar zona și proximitatea față de București.
+          Asta ajută la căutări precum „cazare Bragadiru”, „camere Bragadiru” sau „cazare lângă București”.
+        </p>
+
+        <div class="location-grid">
+          <div class="card">
+            <h3>Adresă</h3>
+            <p>Strada Exemplu 10, Bragadiru, Ilfov</p>
+
+            <h3 style="margin-top:20px;">Puncte de interes</h3>
+            <p>
+              Aproape de București, acces facil către zone rezidențiale, comerciale și industriale.
+              Ideal pentru oaspeți aflați în tranzit, în interes de serviciu sau în vizită.
+            </p>
+
+            <p style="margin-top:18px;">
+              <a href="https://maps.google.com/?q=Bragadiru" target="_blank" rel="noopener">
+                Vezi locația pe Google Maps
+              </a>
+            </p>
+          </div>
+
+          <div class="map-placeholder">
+            Înlocuiește această zonă cu o captură de hartă sau cu un embed Google Maps, dacă dorești.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="seo-grid">
+          <div class="card">
+            <h3>Cazare Bragadiru pentru sejur scurt</h3>
+            <p>
+              Dacă ai nevoie de cazare în Bragadiru pentru una sau mai multe nopți, oferim o variantă simplă,
+              rapidă și convenabilă. Rezervarea se face direct, fără intermediari.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Camere de închiriat aproape de București</h3>
+            <p>
+              Locația este potrivită pentru cei care caută camere de închiriat aproape de București, dar vor
+              o variantă mai accesibilă și liniștită în Bragadiru.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta">
+          <h2>Contact și rezervare</h2>
+          <p>
+            Pentru disponibilitate, tarife actuale și rezervări, contactează-ne direct. Răspundem rapid la telefon și WhatsApp.
+          </p>
+
+          <div class="contact-grid">
+            <div>
+              <p><strong>Telefon:</strong> <a href="tel:+40700000000" style="color:#fff;">+40 700 000 000</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/40700000000" style="color:#fff;">Trimite mesaj</a></p>
+              <p><strong>Email:</strong> <a href="mailto:contact@cazarebragadiru.ro" style="color:#fff;">contact@cazarebragadiru.ro</a></p>
+            </div>
+            <div>
+              <p><strong>Adresă:</strong> Strada Exemplu 10, Bragadiru, Ilfov</p>
+              <p><strong>Program contact:</strong> 08:00 – 22:00</p>
+              <p><strong>Rezervări:</strong> Zilnic, în funcție de disponibilitate</p>
+            </div>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 18px;">
+            <a class="btn btn-primary" href="tel:+40700000000">Sună acum</a>
+            <a class="btn btn-secondary" href="https://wa.me/40700000000">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Cazare Bragadiru</strong><br />
+        Camere de închiriat în Bragadiru, aproape de București.
+      </div>
+      <div>
+        <a href="/">Acasă</a> |
+        <a href="#camere">Camere</a> |
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
