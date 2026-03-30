@@ -4,414 +4,679 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cazare Bragadiru | Camere de închiriat aproape de București</title>
-  <meta name="description" content="Cazare în Bragadiru, camere curate și confortabile, ideale pentru sejur scurt sau lung. Rezervare rapidă prin telefon sau WhatsApp." />
+  <title>The Ranch House Bragadiru | Cazare în Bragadiru, Ilfov</title>
+  <meta name="description" content="Cazare în Bragadiru — The Ranch House, casă cu 2 dormitoare, 2 băi, grădină privată, BBQ și parcare acoperită. Până la 6 oaspeți. Rezervare directă prin telefon sau WhatsApp." />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="Cazare Bragadiru" />
-  <meta name="theme-color" content="#1f4b99" />
+  <meta name="author" content="The Ranch House Bragadiru" />
+  <meta name="theme-color" content="#5C3D1E" />
   <link rel="canonical" href="https://cazarebragadiru.ro/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ro_RO" />
-  <meta property="og:title" content="Cazare Bragadiru | Camere de închiriat aproape de București" />
-  <meta property="og:description" content="Rezervă rapid cazare în Bragadiru. Camere confortabile, locație convenabilă, acces facil către București." />
+  <meta property="og:title" content="The Ranch House Bragadiru | Cazare în Bragadiru" />
+  <meta property="og:description" content="Casă de vacanță cu 2 dormitoare, grădină, BBQ și parcare acoperită în Bragadiru, Ilfov. Rezervare directă fără comision." />
   <meta property="og:url" content="https://cazarebragadiru.ro/" />
-  <meta property="og:site_name" content="Cazare Bragadiru" />
+  <meta property="og:site_name" content="The Ranch House Bragadiru" />
   <meta property="og:image" content="https://cazarebragadiru.ro/images/hero.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cazare Bragadiru" />
-  <meta name="twitter:description" content="Camere de închiriat în Bragadiru, rezervare rapidă." />
+  <meta name="twitter:title" content="The Ranch House Bragadiru" />
+  <meta name="twitter:description" content="Casă de vacanță cu 2 dormitoare, grădină și BBQ în Bragadiru, lângă București." />
   <meta name="twitter:image" content="https://cazarebragadiru.ro/images/hero.jpg" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
   <style>
+    /* ── VARIABLES ─────────────────────────────── */
     :root {
-      --primary: #1f4b99;
-      --primary-dark: #173a76;
-      --accent: #e6f0ff;
-      --text: #1c2430;
-      --muted: #5f6b7a;
-      --bg: #f7f9fc;
-      --white: #ffffff;
-      --border: #dce3ee;
-      --shadow: 0 10px 30px rgba(22, 34, 51, 0.08);
-      --radius: 16px;
-      --max-width: 1140px;
+      --primary:      #5C3D1E;
+      --primary-dark: #3E2810;
+      --accent:       #F5ECD7;
+      --accent-dark:  #DFC99A;
+      --text:         #2C1A0E;
+      --muted:        #7A6350;
+      --bg:           #FAF6EF;
+      --highlight:    #8B6914;
+      --green:        #4A6741;
+      --border:       #E0D0B8;
+      --white:        #FFFFFF;
+      --shadow:       0 4px 20px rgba(44, 26, 14, 0.09);
+      --shadow-lg:    0 8px 40px rgba(44, 26, 14, 0.15);
+      --radius:       12px;
+      --max-width:    1100px;
+      --nav-h:        64px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    /* ── RESET ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.6;
+      line-height: 1.65;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-      border-radius: 14px;
+    img { max-width: 100%; display: block; }
+    a   { color: var(--primary); text-decoration: none; }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.2;
+      margin: 0;
     }
+    p { margin: 0; }
+    ul { margin: 0; padding: 0; }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
+    /* ── LAYOUT ─────────────────────────────────── */
     .container {
       width: min(var(--max-width), calc(100% - 32px));
       margin: 0 auto;
     }
+    .section { padding: 72px 0; }
+    .section-alt {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--highlight);
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
 
+    /* ── TOPBAR ─────────────────────────────────── */
     .topbar {
       background: var(--primary-dark);
-      color: #fff;
-      font-size: 14px;
+      color: var(--accent);
+      font-size: 13px;
+      padding: 8px 0;
     }
-
     .topbar .container {
       display: flex;
-      gap: 16px;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      gap: 10px;
       flex-wrap: wrap;
     }
+    .topbar a { color: var(--accent); font-weight: 700; }
+    .topbar-links { display: flex; gap: 20px; }
 
-    .topbar a {
-      color: #fff;
-      font-weight: 700;
-    }
-
-    header {
-      background: linear-gradient(rgba(20, 37, 66, 0.6), rgba(20, 37, 66, 0.6)),
-                  url("images/hero.jpg") center/cover no-repeat;
-      color: #fff;
-    }
-
-    nav {
-      padding: 18px 0;
-    }
-
+    /* ── STICKY NAV ─────────────────────────────── */
     .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(250, 246, 239, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 8px rgba(44, 26, 14, 0.06);
+    }
+    nav {
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      width: 100%;
+      gap: 16px;
     }
-
     .brand {
-      font-size: 24px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 19px;
       font-weight: 700;
-      color: #fff;
-    }
-
-    .menu {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .menu a {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .hero {
-      padding: 64px 0 80px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(34px, 5vw, 54px);
-      line-height: 1.1;
-      margin: 0 0 18px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 0 24px;
-      color: #eef4ff;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: #fff;
       color: var(--primary-dark);
+      white-space: nowrap;
     }
-
-    .btn-primary:hover {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-nav {
+      background: var(--primary) !important;
+      color: var(--white) !important;
+      padding: 9px 20px;
+      border-radius: 999px;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .btn-nav:hover {
+      background: var(--primary-dark) !important;
       transform: translateY(-1px);
     }
-
-    .btn-secondary {
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      color: #fff;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .booking-card {
-      background: rgba(255, 255, 255, 0.96);
-      color: var(--text);
-      padding: 24px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .booking-card h2 {
-      margin-top: 0;
-      margin-bottom: 14px;
+    .btn-hamburger {
+      display: none;
+      background: none;
+      border: none;
       font-size: 24px;
+      cursor: pointer;
       color: var(--primary-dark);
+      padding: 4px;
     }
 
-    .booking-list {
-      margin: 0 0 18px;
-      padding-left: 18px;
-      color: var(--muted);
+    /* ── HERO ───────────────────────────────────── */
+    .hero {
+      background:
+        linear-gradient(rgba(28, 16, 5, 0.58), rgba(28, 16, 5, 0.58)),
+        url('images/hero.webp') center / cover no-repeat;
+      color: var(--white);
+      padding: 96px 0 80px;
     }
-
-    .booking-box {
-      background: var(--accent);
-      border-radius: 12px;
-      padding: 14px;
-      margin-bottom: 14px;
+    .hero-body { max-width: 680px; }
+    .hero-eyebrow {
+      font-size: 12px;
       font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 14px;
     }
-
-    .section {
-      padding: 64px 0;
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 66px);
+      color: var(--white);
+      margin-bottom: 6px;
     }
-
-    .section h2 {
-      font-size: 34px;
-      margin: 0 0 10px;
-      color: var(--primary-dark);
+    .hero-sub {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(18px, 2.5vw, 23px);
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 20px;
     }
-
-    .section-intro {
-      max-width: 760px;
-      color: var(--muted);
-      margin-bottom: 30px;
+    .hero-desc {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.87);
+      max-width: 560px;
+      margin-bottom: 28px;
+      line-height: 1.7;
     }
+    .ratings-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      backdrop-filter: blur(4px);
+    }
+    .rating-score {
+      background: var(--highlight);
+      color: var(--white);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-    .features {
+    /* ── BUTTONS ────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn-brown  { background: var(--primary);  color: var(--white); }
+    .btn-brown:hover { background: var(--primary-dark); }
+    .btn-wa     { background: #25D366; color: var(--white); }
+    .btn-wa:hover { background: #1db954; }
+    .btn-ghost  { background: transparent; border: 2px solid rgba(255,255,255,0.7); color: var(--white); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+    .btn-outline:hover { background: var(--accent); }
+
+    /* ── QUICK FACTS BAR ────────────────────────── */
+    .facts-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .facts-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .fact {
+      flex: 1;
+      min-width: 130px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border-right: 1px solid var(--border);
+    }
+    .fact:last-child { border-right: none; }
+    .fact-icon  { font-size: 26px; flex-shrink: 0; }
+    .fact-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+    .fact-value { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+
+    /* ── GALLERY ────────────────────────────────── */
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      gap: 10px;
+    }
+    .gal-item {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+    .gal-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .gal-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gal-item:hover img { transform: scale(1.05); }
+    .gal-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(44, 26, 14, 0);
+      transition: background 0.3s;
+      border-radius: 8px;
+    }
+    .gal-item:hover::after { background: rgba(44, 26, 14, 0.1); }
+    .gal-more {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(44, 26, 14, 0.52);
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      z-index: 1;
+      border-radius: 8px;
     }
 
-    .card {
-      background: var(--white);
-      padding: 22px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+    /* ── LIGHTBOX ───────────────────────────────── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 9, 3, 0.96);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lb-img {
+      max-width: 90vw;
+      max-height: 86vh;
+      object-fit: contain;
+      border-radius: 4px;
+      display: block;
+    }
+    .lb-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 34px;
+      cursor: pointer;
+      opacity: 0.75;
+      line-height: 1;
+      padding: 4px;
+    }
+    .lb-close:hover { opacity: 1; }
+    .lb-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+      border: none;
+      color: var(--white);
+      font-size: 36px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      line-height: 1;
+    }
+    .lb-arrow:hover { background: rgba(255,255,255,0.22); }
+    .lb-prev { left: 18px; }
+    .lb-next { right: 18px; }
+    .lb-count {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
     }
 
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .rooms {
+    /* ── AMENITIES ──────────────────────────────── */
+    .amenities-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 16px;
+    }
+    .amenity {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: var(--shadow);
+    }
+    .amenity-icon { font-size: 28px; flex-shrink: 0; margin-top: 1px; }
+    .amenity-name { font-weight: 700; color: var(--primary-dark); font-size: 15px; margin-bottom: 3px; }
+    .amenity-desc { font-size: 13px; color: var(--muted); }
+
+    /* ── PRICING ────────────────────────────────── */
+    .pricing-wrap {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .price-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      min-width: 200px;
+    }
+    .price-card.featured {
+      border-color: var(--highlight);
+      background: #FEFAF0;
+    }
+    .price-period {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .price-amount {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      line-height: 1;
+    }
+    .price-currency {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--muted);
+      vertical-align: super;
+      line-height: 1;
+    }
+    .price-unit { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .price-note {
+      background: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 460px;
+      line-height: 1.6;
+      margin-top: 24px;
     }
 
-    .room-card {
-      background: var(--white);
+    /* ── LOCATION ───────────────────────────────── */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .location-list { list-style: none; }
+    .location-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .location-list li:last-child { border-bottom: none; }
+    .location-list li span:first-child { font-size: 20px; flex-shrink: 0; }
+    .map-box {
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
     }
-
-    .room-content {
-      padding: 20px;
+    .map-box iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: none;
     }
 
-    .room-title {
-      margin: 0 0 8px;
-      font-size: 22px;
-      color: var(--primary-dark);
-    }
-
-    .price {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 10px 0 14px;
-    }
-
-    .room-content ul {
-      margin: 0 0 18px;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .location-grid,
-    .contact-grid,
-    .seo-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .map-placeholder {
-      min-height: 320px;
-      background: linear-gradient(135deg, #dbe8ff, #f8fbff);
-      border: 1px dashed #aac0ea;
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      color: var(--muted);
-    }
-
-    .cta {
-      background: var(--primary-dark);
-      color: #fff;
-      border-radius: 24px;
-      padding: 36px;
-      box-shadow: var(--shadow);
-    }
-
-    .cta h2 {
-      color: #fff;
-      margin-top: 0;
-    }
-
-    .cta p {
-      color: #e7efff;
-    }
-
-    footer {
-      background: #12233f;
-      color: #d8e2f5;
-      padding: 28px 0;
-      margin-top: 20px;
-    }
-
-    footer a {
-      color: #fff;
-    }
-
-    .footer-grid {
+    /* ── FAQ ────────────────────────────────────── */
+    .faq-list { max-width: 760px; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 0;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-family: inherit;
+      transition: color 0.2s;
+    }
+    .faq-btn:hover { color: var(--primary); }
+    .faq-icon {
+      font-size: 22px;
+      color: var(--highlight);
+      flex-shrink: 0;
+      transition: transform 0.25s;
+      font-style: normal;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease;
+    }
+    .faq-item.open .faq-body { max-height: 500px; }
+    .faq-body p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+      padding-bottom: 18px;
+    }
+
+    /* ── CONTACT ────────────────────────────────── */
+    .contact-section { background: var(--primary-dark); }
+    .contact-section h2 { color: var(--white); margin-bottom: 12px; }
+    .contact-section .eyebrow { color: var(--accent-dark); }
+    .contact-section .lead { color: rgba(245, 236, 215, 0.75); margin-bottom: 36px; }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 580px;
+      margin-bottom: 32px;
+    }
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .cc-icon   { font-size: 38px; margin-bottom: 8px; }
+    .cc-label  { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 6px; }
+    .cc-number { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 18px; }
+    .contact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      max-width: 580px;
+      margin-bottom: 36px;
+    }
+    .cd-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: var(--accent);
+    }
+    .cd-item strong { display: block; color: var(--white); margin-bottom: 2px; font-size: 13px; }
+    .platforms { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .platforms-lbl { font-size: 12px; color: rgba(255,255,255,0.45); }
+    .plat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      transition: background 0.2s;
+    }
+    .plat-badge:hover { background: rgba(255,255,255,0.18); }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    footer {
+      background: #180C04;
+      color: rgba(245, 236, 215, 0.6);
+      padding: 28px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 16px;
       flex-wrap: wrap;
-      align-items: center;
     }
-
-    .badge-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .badge {
-      background: #eef4ff;
-      color: var(--primary-dark);
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 14px;
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-size: 16px;
       font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
     }
+    footer a { color: var(--accent-dark); }
+    .footer-links { display: flex; gap: 16px; font-size: 13px; flex-wrap: wrap; }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .features,
-      .rooms,
-      .location-grid,
-      .contact-grid,
-      .seo-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding: 48px 0 56px;
-      }
-
-      .section {
-        padding: 50px 0;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .section h2 {
-        font-size: 28px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .hero-actions {
+    /* ── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 20px;
+        gap: 14px;
+        box-shadow: 0 4px 16px rgba(44,26,14,0.08);
       }
+      .btn-hamburger { display: block; }
+      .gallery-grid  { grid-template-columns: repeat(2, 1fr); }
+      .gal-item:first-child { grid-column: span 2; grid-row: span 1; }
+      .amenities-grid { grid-template-columns: 1fr 1fr; }
+      .location-grid  { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 52px 0; }
+      .hero    { padding: 68px 0 54px; }
+      .gallery-grid { gap: 6px; }
+      .amenities-grid  { grid-template-columns: 1fr; }
+      .pricing-wrap    { flex-direction: column; }
+      .price-card      { width: 100%; }
+      .contact-cards   { grid-template-columns: 1fr; max-width: 100%; }
+      .contact-details { grid-template-columns: 1fr; max-width: 100%; }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
+      .facts-grid   { flex-direction: column; }
+      .fact { border-right: none; border-bottom: 1px solid var(--border); }
+      .fact:last-child { border-bottom: none; }
+      .lb-arrow { display: none; }
     }
   </style>
 
+  <!-- Schema.org: LodgingBusiness + VacationRental -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Cazare Bragadiru",
+    "@type": ["LodgingBusiness", "VacationRental"],
+    "name": "The Ranch House Bragadiru",
     "url": "https://cazarebragadiru.ro/",
-    "telephone": "+40 700 000 000",
-    "email": "contact@cazarebragadiru.ro",
+    "telephone": "+40726420648",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Strada Exemplu 10",
+      "streetAddress": "Strada Iederei nr 65",
       "addressLocality": "Bragadiru",
       "addressRegion": "Ilfov",
       "postalCode": "077025",
@@ -419,261 +684,576 @@
     },
     "image": [
       "https://cazarebragadiru.ro/images/hero.jpg",
-      "https://cazarebragadiru.ro/images/camera-standard.jpg",
-      "https://cazarebragadiru.ro/images/camera-family.jpg"
+      "https://cazarebragadiru.ro/images/exterior-1.jpg",
+      "https://cazarebragadiru.ro/images/garden-1.jpg"
     ],
-    "priceRange": "$$",
-    "description": "Cazare în Bragadiru cu camere confortabile, acces rapid către București și rezervare directă prin telefon sau WhatsApp."
+    "priceRange": "342–420 RON/noapte",
+    "description": "Casă de vacanță cu 2 dormitoare, 2 băi, grădină privată, BBQ, parcare acoperită și până la 6 locuri de cazare în Bragadiru, Ilfov.",
+    "numberOfRooms": 2,
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Wi-Fi de mare viteză", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Parcare acoperită gratuită", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Aer condiționat (3 unități)", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Bucătărie completă", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "BBQ", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Mașină de spălat + uscător", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Grădină privată", "value": true}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.5",
+      "bestRating": "10",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cum pot face o rezervare?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Rezervarea se face direct prin telefon sau WhatsApp la +40 726 420 648. Răspundem rapid și confirmăm disponibilitatea imediat."}
+      },
+      {
+        "@type": "Question",
+        "name": "Care sunt tarifele?",
+        "acceptedAnswer": {"@type": "Answer", "text": "342 lei/noapte de luni până joi. Vineri și sâmbătă tariful este 420 lei/noapte. Nu există sejur minim."}
+      },
+      {
+        "@type": "Question",
+        "name": "Există parcare disponibilă?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Da, parcare acoperită gratuită în curtea proprietății, cu acces securizat."}
+      },
+      {
+        "@type": "Question",
+        "name": "Câte persoane pot fi cazate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Până la 6 persoane: 2 dormitoare plus o canapea extensibilă în living."}
+      }
+    ]
   }
   </script>
 </head>
 <body>
 
-  <div class="topbar">
-    <div class="container">
-      <div>Cazare în Bragadiru • Rezervare rapidă • Aproape de București</div>
-      <div>
-        Telefon: <a href="tel:+40700000000">+40 700 000 000</a> |
-        WhatsApp: <a href="https://wa.me/40700000000">Scrie acum</a>
+<!-- ═══════════════ TOPBAR ═══════════════ -->
+<div class="topbar">
+  <div class="container">
+    <span>The Ranch House · Bragadiru, Ilfov</span>
+    <div class="topbar-links">
+      <a href="tel:+40726420648">📞 +40 726 420 648</a>
+      <a href="https://wa.me/40726420648" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ NAV ══════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav>
+      <div class="nav-inner">
+        <a class="brand" href="/">The Ranch House</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#galerie">Galerie</a>
+          <a href="#facilitati">Facilități</a>
+          <a href="#tarife">Tarife</a>
+          <a href="#locatie">Locație</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn-nav" href="tel:+40726420648">📞 Rezervă acum</a>
+        </div>
+        <button class="btn-hamburger" id="btnMenu" aria-label="Deschide meniu">☰</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════ HERO ══════════════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-body">
+      <p class="hero-eyebrow">Bragadiru, Ilfov &nbsp;·&nbsp; Cazare directă</p>
+      <h1>The Ranch House</h1>
+      <p class="hero-sub">Casa ta de vacanță lângă București</p>
+      <p class="hero-desc">
+        O casă spațioasă cu grădină, 2 dormitoare, 2 băi și loc pentru 6 oaspeți.
+        Rezervare directă — fără comision, fără intermediari.
+      </p>
+
+      <div class="ratings-row">
+        <div class="rating-badge">
+          <span class="rating-score">9.5</span> Booking.com
+        </div>
+        <div class="rating-badge">
+          <span class="rating-score">5 / 5</span> Airbnb
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-brown" href="tel:+40726420648">📞 Sună pentru rezervare</a>
+        <a class="btn btn-wa"    href="https://wa.me/40726420648" target="_blank" rel="noopener">💬 Rezervă pe WhatsApp</a>
       </div>
     </div>
   </div>
+</header>
 
-  <header>
+<!-- ═══════════════ QUICK FACTS ══════════ -->
+<div class="facts-bar">
+  <div class="container">
+    <div class="facts-grid">
+      <div class="fact">
+        <span class="fact-icon">🛏️</span>
+        <div>
+          <div class="fact-label">Dormitoare</div>
+          <div class="fact-value">2 dormitoare</div>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">🚿</span>
+        <div>
+          <div class="fact-label">Băi</div>
+          <div class="fact-value">2 băi complete</div>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">👥</span>
+        <div>
+          <div class="fact-label">Capacitate</div>
+          <div class="fact-value">până la 6 oaspeți</div>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">🌿</span>
+        <div>
+          <div class="fact-label">Grădină</div>
+          <div class="fact-value">Curte privată</div>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">🚗</span>
+        <div>
+          <div class="fact-label">Parcare</div>
+          <div class="fact-value">Acoperită, gratuită</div>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">📍</span>
+        <div>
+          <div class="fact-label">Locație</div>
+          <div class="fact-value">Bragadiru, Ilfov</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ═══════════════ GALLERY ══════════════ -->
+  <section class="section" id="galerie">
     <div class="container">
-      <nav>
-        <div class="nav-wrap">
-          <a class="brand" href="/">Cazare Bragadiru</a>
-          <div class="menu">
-            <a href="#camere">Camere</a>
-            <a href="#facilitati">Facilități</a>
-            <a href="#locatie">Locație</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <p class="eyebrow">Fotografii</p>
+      <h2>Explorează proprietatea</h2>
+      <p class="lead">Exterior, grădină, living, bucătărie, dormitoare și băi — toate fotografiate în iulie 2025.</p>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
 
-      <div class="hero">
-        <div class="hero-grid">
+  <!-- ═══════════════ AMENITIES ════════════ -->
+  <section class="section section-alt" id="facilitati">
+    <div class="container">
+      <p class="eyebrow">Ce include casa</p>
+      <h2>Facilități</h2>
+      <p class="lead">Tot ce ai nevoie pentru un sejur confortabil — indiferent că vii în weekend, în delegație sau cu familia.</p>
+
+      <div class="amenities-grid">
+        <div class="amenity">
+          <span class="amenity-icon">🌐</span>
           <div>
-            <h1>Cazare Bragadiru, camere confortabile la câteva minute de București</h1>
-            <p>
-              Oferim cazare în Bragadiru pentru persoane aflate în tranzit, muncă sau sejur scurt.
-              Camere curate, acces facil, rezervare simplă și comunicare directă.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="tel:+40700000000">Sună pentru rezervare</a>
-              <a class="btn btn-secondary" href="https://wa.me/40700000000">Rezervă pe WhatsApp</a>
-            </div>
-
-            <div class="badge-row">
-              <span class="badge">Rezervare directă</span>
-              <span class="badge">Prețuri accesibile</span>
-              <span class="badge">Locație convenabilă</span>
-              <span class="badge">Ideal pentru muncitori și tranzit</span>
-            </div>
+            <div class="amenity-name">Internet de mare viteză</div>
+            <div class="amenity-desc">Wi-Fi disponibil în toată proprietatea</div>
           </div>
-
-          <aside class="booking-card">
-            <h2>Rezervare rapidă</h2>
-            <div class="booking-box">Răspuns rapid la telefon și WhatsApp</div>
-            <ul class="booking-list">
-              <li>Check-in flexibil, în funcție de disponibilitate</li>
-              <li>Camere pentru 1, 2 sau mai multe persoane</li>
-              <li>Sejururi scurte sau perioade mai lungi</li>
-            </ul>
-            <a class="btn btn-primary" href="tel:+40700000000" style="width:100%; text-align:center;">Apelează acum</a>
-          </aside>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">❄️</span>
+          <div>
+            <div class="amenity-name">3 unități AC</div>
+            <div class="amenity-desc">Aer condiționat în dormitoare și living</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🍳</span>
+          <div>
+            <div class="amenity-name">Bucătărie completă</div>
+            <div class="amenity-desc">Aragaz, cuptor, frigider, ustensile complete</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🚗</span>
+          <div>
+            <div class="amenity-name">Parcare acoperită</div>
+            <div class="amenity-desc">Gratuită, în curtea proprietății, securizată</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🌿</span>
+          <div>
+            <div class="amenity-name">Grădină privată</div>
+            <div class="amenity-desc">Peluză îngrijită, copaci fructiferi, spațiu de relaxare</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🔥</span>
+          <div>
+            <div class="amenity-name">BBQ</div>
+            <div class="amenity-desc">Grătar în grădină, ideal pentru seri în aer liber</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🧺</span>
+          <div>
+            <div class="amenity-name">Mașină de spălat + uscător</div>
+            <div class="amenity-desc">Unități separate, ideale pentru sejururi mai lungi</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🛋️</span>
+          <div>
+            <div class="amenity-name">Canapea extensibilă</div>
+            <div class="amenity-desc">Loc de dormit suplimentar pentru 2 persoane în living</div>
+          </div>
+        </div>
+        <div class="amenity">
+          <span class="amenity-icon">🚿</span>
+          <div>
+            <div class="amenity-name">2 băi complete</div>
+            <div class="amenity-desc">Câte o baie dedicată pentru fiecare dormitor</div>
+          </div>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section" id="facilitati">
-      <div class="container">
-        <h2>De ce să alegi cazare în Bragadiru</h2>
-        <p class="section-intro">
-          Pagina este structurată pentru a evidenția clar oferta de cazare în Bragadiru și avantajele locației,
-          atât pentru vizitatori, cât și pentru motoarele de căutare.
-        </p>
+  <!-- ═══════════════ PRICING ══════════════ -->
+  <section class="section" id="tarife">
+    <div class="container">
+      <p class="eyebrow">Tarife</p>
+      <h2>Prețuri clare, fără surprize</h2>
+      <p class="lead">Rezervare directă — economisești comisionul platformelor. Fără sejur minim, fără taxe ascunse.</p>
 
-        <div class="features">
-          <div class="card">
-            <h3>Camere curate</h3>
-            <p>Spații îngrijite, potrivite pentru odihnă și șederi confortabile.</p>
+      <div class="pricing-wrap">
+        <div class="price-card">
+          <div class="price-period">Luni — Joi</div>
+          <div>
+            <span class="price-currency">lei</span>
+            <span class="price-amount">342</span>
           </div>
-          <div class="card">
-            <h3>Acces rapid</h3>
-            <p>Locație cu acces facil către București și zonele din apropiere.</p>
+          <div class="price-unit">/ noapte</div>
+        </div>
+        <div class="price-card featured">
+          <div class="price-period">Vineri — Sâmbătă</div>
+          <div>
+            <span class="price-currency">lei</span>
+            <span class="price-amount">420</span>
           </div>
-          <div class="card">
-            <h3>Rezervare directă</h3>
-            <p>Fără pași complicați. Ne contactezi direct și primești confirmarea rapid.</p>
-          </div>
-          <div class="card">
-            <h3>Preț convenabil</h3>
-            <p>O soluție practică pentru sejururi scurte, delegații sau muncă în zonă.</p>
-          </div>
+          <div class="price-unit">/ noapte</div>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="camere">
-      <div class="container">
-        <h2>Camere disponibile</h2>
-        <p class="section-intro">
-          Prezintă clar tipurile de camere. Poți păstra această secțiune simplă sau o poți extinde ulterior
-          cu galerii, disponibilitate și formulare.
-        </p>
+      <div class="price-note">
+        Nu există un sejur minim. Duminica are tariful de zi lucrătoare (342 lei).
+        Contactează-ne pentru a confirma disponibilitatea și tariful exact pentru perioada dorită.
+      </div>
+    </div>
+  </section>
 
-        <div class="rooms">
-          <article class="room-card">
-            <img src="images/camera-standard.jpg" alt="Cameră standard pentru cazare în Bragadiru" />
-            <div class="room-content">
-              <h3 class="room-title">Cameră standard</h3>
-              <p>Potrivită pentru 1–2 persoane, ideală pentru șederi scurte.</p>
-              <div class="price">de la 150 lei/noapte</div>
-              <ul>
-                <li>Pat confortabil</li>
-                <li>TV și Wi-Fi</li>
-                <li>Baie proprie sau comună</li>
-              </ul>
-              <a class="btn btn-primary" href="tel:+40700000000">Rezervă acum</a>
-            </div>
-          </article>
+  <!-- ═══════════════ LOCATION ═════════════ -->
+  <section class="section section-alt" id="locatie">
+    <div class="container">
+      <p class="eyebrow">Unde ne găsești</p>
+      <h2>Locație avantajoasă în Bragadiru</h2>
+      <p class="lead">Bragadiru se află la limita sudică a Bucureștiului — acces rapid, fără aglomerația centrului.</p>
 
-          <article class="room-card">
-            <img src="images/camera-dubla.jpg" alt="Cameră dublă în Bragadiru" />
-            <div class="room-content">
-              <h3 class="room-title">Cameră dublă</h3>
-              <p>Confort sporit pentru cupluri sau două persoane.</p>
-              <div class="price">de la 180 lei/noapte</div>
-              <ul>
-                <li>Pat matrimonial sau paturi separate</li>
-                <li>Aer condiționat</li>
-                <li>Spațiu generos</li>
-              </ul>
-              <a class="btn btn-primary" href="tel:+40700000000">Solicită ofertă</a>
-            </div>
-          </article>
+      <div class="location-grid">
+        <div>
+          <ul class="location-list">
+            <li><span>📍</span><span>Strada Iederei nr 65, Bragadiru, Ilfov 077025</span></li>
+            <li><span>🚗</span><span>10–15 minute față de centrul Bucureștiului pe DN6 sau A1</span></li>
+            <li><span>✈️</span><span>Aproximativ 40 de minute față de Aeroportul Henri Coandă</span></li>
+            <li><span>🏬</span><span>Supermercate și magazine la câteva minute distanță</span></li>
+            <li><span>🚌</span><span>Acces la transportul public spre București</span></li>
+            <li><span>🌲</span><span>Cartier liniștit, ideal pentru relaxare</span></li>
+          </ul>
+          <a class="btn btn-outline" href="https://maps.google.com/?q=Strada+Iederei+65,Bragadiru,Ilfov" target="_blank" rel="noopener" style="margin-top: 24px; display: inline-flex;">
+            🗺️ Deschide în Google Maps
+          </a>
+        </div>
 
-          <article class="room-card">
-            <img src="images/camera-family.jpg" alt="Cameră pentru mai multe persoane în Bragadiru" />
-            <div class="room-content">
-              <h3 class="room-title">Cameră pentru grup</h3>
-              <p>Recomandată pentru echipe, muncitori sau șederi mai lungi.</p>
-              <div class="price">preț la cerere</div>
-              <ul>
-                <li>Capacitate extinsă</li>
-                <li>Condiții avantajoase</li>
-                <li>Disponibilitate flexibilă</li>
-              </ul>
-              <a class="btn btn-primary" href="https://wa.me/40700000000">Contact pe WhatsApp</a>
-            </div>
-          </article>
+        <div class="map-box">
+          <iframe
+            src="https://maps.google.com/maps?q=Strada+Iederei+65,+Bragadiru,+Ilfov,+077025,+Romania&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            title="Locație The Ranch House Bragadiru"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="locatie">
-      <div class="container">
-        <h2>Locație avantajoasă în Bragadiru</h2>
-        <p class="section-intro">
-          Pentru SEO local, este important să menționezi clar zona și proximitatea față de București.
-          Asta ajută la căutări precum „cazare Bragadiru”, „camere Bragadiru” sau „cazare lângă București”.
-        </p>
+  <!-- ═══════════════ FAQ ═══════════════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <p class="eyebrow">Întrebări frecvente</p>
+      <h2>Ai întrebări?</h2>
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
 
-        <div class="location-grid">
-          <div class="card">
-            <h3>Adresă</h3>
-            <p>Strada Exemplu 10, Bragadiru, Ilfov</p>
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2>Rezervă direct</h2>
+      <p class="lead">Răspundem rapid. O singură conversație și totul e aranjat — fără formulare, fără așteptare.</p>
 
-            <h3 style="margin-top:20px;">Puncte de interes</h3>
-            <p>
-              Aproape de București, acces facil către zone rezidențiale, comerciale și industriale.
-              Ideal pentru oaspeți aflați în tranzit, în interes de serviciu sau în vizită.
-            </p>
-
-            <p style="margin-top:18px;">
-              <a href="https://maps.google.com/?q=Bragadiru" target="_blank" rel="noopener">
-                Vezi locația pe Google Maps
-              </a>
-            </p>
-          </div>
-
-          <div class="map-placeholder">
-            Înlocuiește această zonă cu o captură de hartă sau cu un embed Google Maps, dacă dorești.
-          </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="cc-icon">📞</div>
+          <div class="cc-label">Telefon</div>
+          <div class="cc-number">+40 726 420 648</div>
+          <a class="btn btn-brown" href="tel:+40726420648">Sună acum</a>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon">💬</div>
+          <div class="cc-label">WhatsApp</div>
+          <div class="cc-number">+40 726 420 648</div>
+          <a class="btn btn-wa" href="https://wa.me/40726420648" target="_blank" rel="noopener">Trimite mesaj</a>
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="seo-grid">
-          <div class="card">
-            <h3>Cazare Bragadiru pentru sejur scurt</h3>
-            <p>
-              Dacă ai nevoie de cazare în Bragadiru pentru una sau mai multe nopți, oferim o variantă simplă,
-              rapidă și convenabilă. Rezervarea se face direct, fără intermediari.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Camere de închiriat aproape de București</h3>
-            <p>
-              Locația este potrivită pentru cei care caută camere de închiriat aproape de București, dar vor
-              o variantă mai accesibilă și liniștită în Bragadiru.
-            </p>
-          </div>
-        </div>
+      <div class="contact-details">
+        <div class="cd-item"><strong>Adresă</strong>Strada Iederei nr 65, Bragadiru, Ilfov</div>
+        <div class="cd-item"><strong>Program contact</strong>08:00 – 22:00, zilnic</div>
+        <div class="cd-item"><strong>Check-in</strong>de la 15:00 (flexibil)</div>
+        <div class="cd-item"><strong>Check-out</strong>până la 11:00</div>
       </div>
-    </section>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="cta">
-          <h2>Contact și rezervare</h2>
-          <p>
-            Pentru disponibilitate, tarife actuale și rezervări, contactează-ne direct. Răspundem rapid la telefon și WhatsApp.
-          </p>
-
-          <div class="contact-grid">
-            <div>
-              <p><strong>Telefon:</strong> <a href="tel:+40700000000" style="color:#fff;">+40 700 000 000</a></p>
-              <p><strong>WhatsApp:</strong> <a href="https://wa.me/40700000000" style="color:#fff;">Trimite mesaj</a></p>
-              <p><strong>Email:</strong> <a href="mailto:contact@cazarebragadiru.ro" style="color:#fff;">contact@cazarebragadiru.ro</a></p>
-            </div>
-            <div>
-              <p><strong>Adresă:</strong> Strada Exemplu 10, Bragadiru, Ilfov</p>
-              <p><strong>Program contact:</strong> 08:00 – 22:00</p>
-              <p><strong>Rezervări:</strong> Zilnic, în funcție de disponibilitate</p>
-            </div>
-          </div>
-
-          <div class="hero-actions" style="margin-top: 18px;">
-            <a class="btn btn-primary" href="tel:+40700000000">Sună acum</a>
-            <a class="btn btn-secondary" href="https://wa.me/40700000000">WhatsApp</a>
-          </div>
-        </div>
+      <div class="platforms">
+        <span class="platforms-lbl">Disponibil și pe:</span>
+        <!-- TODO: Replace href values with your exact Booking.com and Airbnb listing URLs -->
+        <a class="plat-badge" href="https://www.booking.com/hotel/ro/the-ranch-house-bragadiru-bragadiru.ro.html" target="_blank" rel="noopener">
+          🏨 Booking.com
+        </a>
+        <a class="plat-badge" href="https://www.airbnb.com/rooms/1333904231430880973" target="_blank" rel="noopener">
+          🏠 Airbnb
+        </a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container footer-grid">
+</main>
+
+<!-- ═══════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
       <div>
-        <strong>Cazare Bragadiru</strong><br />
-        Camere de închiriat în Bragadiru, aproape de București.
+        <span class="footer-brand">The Ranch House Bragadiru</span>
+        <span style="font-size:13px;">Strada Iederei nr 65, Bragadiru, Ilfov 077025</span>
       </div>
-      <div>
-        <a href="/">Acasă</a> |
-        <a href="#camere">Camere</a> |
+      <div class="footer-links">
+        <a href="#galerie">Galerie</a>
+        <a href="#facilitati">Facilități</a>
+        <a href="#tarife">Tarife</a>
         <a href="#contact">Contact</a>
+        <span style="opacity:0.4;">© 2026 The Ranch House Bragadiru</span>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+<!-- ═══════════════ LIGHTBOX ═════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie foto">
+  <button class="lb-close" id="lbClose" aria-label="Închide">✕</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Foto anterioară">&#8249;</button>
+  <picture>
+    <source id="lbSource" type="image/webp" />
+    <img class="lb-img" id="lbImg" src="" alt="" />
+  </picture>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Foto următoare">&#8250;</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script>
+/* ════════════════════════════════════════
+   GALLERY DATA
+   Update src values with .webp once converted.
+   The <picture> element below uses webp as source
+   and jpg as fallback automatically.
+════════════════════════════════════════ */
+const PHOTOS = [
+  { w: 'images/exterior-1.webp',  j: 'images/exterior-1.jpg',  a: 'The Ranch House — vedere față' },
+  { w: 'images/exterior-2.webp',  j: 'images/exterior-2.jpg',  a: 'Parcare acoperită și viță de vie' },
+  { w: 'images/exterior-3.webp',  j: 'images/exterior-3.jpg',  a: 'Vedere laterală — intrare' },
+  { w: 'images/garden-1.webp',    j: 'images/garden-1.jpg',    a: 'Grădină cu BBQ și hamac' },
+  { w: 'images/garden-2.webp',    j: 'images/garden-2.jpg',    a: 'Grădină cu flori și copaci' },
+  { w: 'images/garden-3.webp',    j: 'images/garden-3.jpg',    a: 'Leagăn și hamac sub copaci' },
+  { w: 'images/living-1.webp',    j: 'images/living-1.jpg',    a: 'Living — zonă de relaxare' },
+  { w: 'images/living-2.webp',    j: 'images/living-2.jpg',    a: 'Living' },
+  { w: 'images/living-3.webp',    j: 'images/living-3.jpg',    a: 'Living' },
+  { w: 'images/kitchen-1.webp',   j: 'images/kitchen-1.jpg',   a: 'Bucătărie complet echipată' },
+  { w: 'images/kitchen-2.webp',   j: 'images/kitchen-2.jpg',   a: 'Bucătărie' },
+  { w: 'images/kitchen-3.webp',   j: 'images/kitchen-3.jpg',   a: 'Bucătărie' },
+  { w: 'images/bedroom-1-1.webp', j: 'images/bedroom-1-1.jpg', a: 'Dormitor 1' },
+  { w: 'images/bedroom-1-2.webp', j: 'images/bedroom-1-2.jpg', a: 'Dormitor 1' },
+  { w: 'images/bedroom-2-1.webp', j: 'images/bedroom-2-1.jpg', a: 'Dormitor 2' },
+  { w: 'images/bedroom-2-2.webp', j: 'images/bedroom-2-2.jpg', a: 'Dormitor 2' },
+  { w: 'images/bathroom-1.webp',  j: 'images/bathroom-1.jpg',  a: 'Baie 1' },
+  { w: 'images/bathroom-2.webp',  j: 'images/bathroom-2.jpg',  a: 'Baie 2' },
+];
+
+/* ─── Build gallery grid ─── */
+const GRID_VISIBLE = 9;
+const grid = document.getElementById('galleryGrid');
+
+PHOTOS.slice(0, GRID_VISIBLE).forEach((p, i) => {
+  const item = document.createElement('div');
+  item.className = 'gal-item';
+  item.setAttribute('role', 'button');
+  item.setAttribute('tabindex', '0');
+  item.setAttribute('aria-label', 'Deschide: ' + p.a);
+
+  const isLast = i === GRID_VISIBLE - 1 && PHOTOS.length > GRID_VISIBLE;
+  item.innerHTML =
+    '<picture>' +
+      '<source srcset="' + p.w + '" type="image/webp" />' +
+      '<img src="' + p.j + '" alt="' + p.a + '" loading="' + (i === 0 ? 'eager' : 'lazy') + '" />' +
+    '</picture>' +
+    (isLast ? '<div class="gal-more">+' + (PHOTOS.length - GRID_VISIBLE) + ' foto</div>' : '');
+
+  item.addEventListener('click', () => openLb(i));
+  item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(i); } });
+  grid.appendChild(item);
+});
+
+/* ─── Lightbox ─── */
+let cur = 0;
+const lb      = document.getElementById('lightbox');
+const lbImg   = document.getElementById('lbImg');
+const lbSrc   = document.getElementById('lbSource');
+const lbCount = document.getElementById('lbCount');
+
+function openLb(idx) {
+  cur = idx;
+  renderLb();
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function renderLb() {
+  const p = PHOTOS[cur];
+  lbSrc.srcset = p.w;
+  lbImg.src    = p.j;
+  lbImg.alt    = p.a;
+  lbCount.textContent = (cur + 1) + ' / ' + PHOTOS.length;
+}
+function prevLb() { cur = (cur - 1 + PHOTOS.length) % PHOTOS.length; renderLb(); }
+function nextLb() { cur = (cur + 1) % PHOTOS.length; renderLb(); }
+
+document.getElementById('lbClose').addEventListener('click', closeLb);
+document.getElementById('lbPrev').addEventListener('click', prevLb);
+document.getElementById('lbNext').addEventListener('click', nextLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')     closeLb();
+  if (e.key === 'ArrowLeft')  prevLb();
+  if (e.key === 'ArrowRight') nextLb();
+});
+
+/* ─── FAQ ─── */
+const FAQS = [
+  {
+    q: 'Cum pot face o rezervare?',
+    a: 'Rezervarea se face direct prin telefon sau WhatsApp la numărul +40 726 420 648. Răspundem rapid și confirmăm disponibilitatea imediat.'
+  },
+  {
+    q: 'Care sunt tarifele?',
+    a: 'Tariful este 342 lei/noapte de luni până joi. Vineri și sâmbătă tariful este 420 lei/noapte. Duminica are tariful de zi lucrătoare. Nu există sejur minim.'
+  },
+  {
+    q: 'Care este ora de check-in și check-out?',
+    a: 'Check-in-ul este de la ora 15:00, iar check-out-ul până la ora 11:00. Check-in flexibil se poate aranja în prealabil, în funcție de disponibilitate.'
+  },
+  {
+    q: 'Există parcare disponibilă?',
+    a: 'Da, proprietatea dispune de parcare acoperită gratuită în curtea interioară, cu acces securizat. Poți parca în siguranță pe toată durata sejurului.'
+  },
+  {
+    q: 'Câte persoane pot fi cazate?',
+    a: 'Casa poate găzdui confortabil până la 6 persoane: 2 dormitoare (câte 2 persoane fiecare) plus o canapea extensibilă în living pentru încă 2 persoane.'
+  },
+  {
+    q: 'Sunt animale de companie permise?',
+    a: 'Te rugăm să ne contactezi în prealabil pentru a discuta despre posibilitatea de a aduce animale de companie.'
+  },
+  {
+    q: 'Ce include bucătăria?',
+    a: 'Bucătăria este complet echipată: aragaz cu cuptor, frigider mare, ustensile de gătit și veselă completă. Potrivită pentru gătit pentru întreaga familie sau grup.'
+  },
+  {
+    q: 'Care sunt regulile casei?',
+    a: 'Nu se fumează în interior. Se respectă liniștea vecinilor între orele 22:00 și 08:00. Proprietatea se predă în aceeași stare în care a fost primită.'
+  },
+  {
+    q: 'Cum ajung la proprietate?',
+    a: 'Proprietatea se află în Bragadiru, la 10–15 minute de centrul Bucureștiului pe DN6 sau A1. Adresa exactă: Strada Iederei nr 65, Bragadiru, Ilfov 077025.'
+  },
+];
+
+const faqList = document.getElementById('faqList');
+FAQS.forEach(({ q, a }) => {
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML =
+    '<button class="faq-btn" aria-expanded="false">' +
+      q +
+      '<i class="faq-icon" aria-hidden="true">+</i>' +
+    '</button>' +
+    '<div class="faq-body" role="region"><p>' + a + '</p></div>';
+  const btn = item.querySelector('.faq-btn');
+  btn.addEventListener('click', () => {
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  faqList.appendChild(item);
+});
+
+/* ─── Mobile nav ─── */
+const btnMenu  = document.getElementById('btnMenu');
+const navLinks = document.getElementById('navLinks');
+
+function syncMenu() {
+  if (window.innerWidth > 900) {
+    navLinks.classList.remove('open');
+    btnMenu.style.display = 'none';
+  } else {
+    btnMenu.style.display = 'block';
+  }
+}
+btnMenu.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+window.addEventListener('resize', syncMenu);
+syncMenu();
+</script>
 
 </body>
 </html>
