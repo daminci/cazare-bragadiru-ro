@@ -717,22 +717,47 @@
       {
         "@type": "Question",
         "name": "Cum pot face o rezervare?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Rezervarea se face direct prin telefon sau WhatsApp la +40 726 420 648. Răspundem rapid și confirmăm disponibilitatea imediat."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Rezervarea se face direct prin telefon sau WhatsApp la numărul +40 726 420 648. Răspundem rapid și confirmăm disponibilitatea imediat."}
       },
       {
         "@type": "Question",
         "name": "Care sunt tarifele?",
-        "acceptedAnswer": {"@type": "Answer", "text": "342 lei/noapte de luni până joi. Vineri și sâmbătă tariful este 420 lei/noapte. Nu există sejur minim."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Tariful este 342 lei/noapte de luni până joi. Vineri și sâmbătă tariful este 420 lei/noapte. Duminica are tariful de zi lucrătoare. Nu există sejur minim."}
+      },
+      {
+        "@type": "Question",
+        "name": "Care este ora de check-in și check-out?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Check-in-ul este de la ora 15:00, iar check-out-ul până la ora 11:00. Check-in flexibil se poate aranja în prealabil, în funcție de disponibilitate."}
       },
       {
         "@type": "Question",
         "name": "Există parcare disponibilă?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Da, parcare acoperită gratuită în curtea proprietății, cu acces securizat."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Da, proprietatea dispune de parcare acoperită gratuită în curtea interioară, cu acces securizat. Poți parca în siguranță pe toată durata sejurului."}
       },
       {
         "@type": "Question",
         "name": "Câte persoane pot fi cazate?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Până la 6 persoane: 2 dormitoare plus o canapea extensibilă în living."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Casa poate găzdui confortabil până la 6 persoane: 2 dormitoare (câte 2 persoane fiecare) plus o canapea extensibilă în living pentru încă 2 persoane."}
+      },
+      {
+        "@type": "Question",
+        "name": "Sunt animale de companie permise?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Te rugăm să ne contactezi în prealabil pentru a discuta despre posibilitatea de a aduce animale de companie."}
+      },
+      {
+        "@type": "Question",
+        "name": "Ce include bucătăria?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Bucătăria este complet echipată: aragaz cu cuptor, frigider mare, ustensile de gătit și veselă completă. Potrivită pentru gătit pentru întreaga familie sau grup."}
+      },
+      {
+        "@type": "Question",
+        "name": "Care sunt regulile casei?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nu se fumează în interior. Se respectă liniștea vecinilor între orele 22:00 și 08:00. Proprietatea se predă în aceeași stare în care a fost primită."}
+      },
+      {
+        "@type": "Question",
+        "name": "Cum ajung la proprietate?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Proprietatea se află în Bragadiru, la 10–15 minute de centrul Bucureștiului pe DN6 sau A1. Adresa exactă: Strada Iederei nr 65, Bragadiru, Ilfov 077025."}
       }
     ]
   }
@@ -1078,7 +1103,7 @@
 </footer>
 
 <!-- ═══════════════ LIGHTBOX ═════════════ -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie foto">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie foto" tabindex="-1">
   <button class="lb-close" id="lbClose" aria-label="Închide">✕</button>
   <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Foto anterioară">&#8249;</button>
   <picture>
@@ -1147,16 +1172,29 @@ const lb      = document.getElementById('lightbox');
 const lbImg   = document.getElementById('lbImg');
 const lbSrc   = document.getElementById('lbSource');
 const lbCount = document.getElementById('lbCount');
+const lbClose = document.getElementById('lbClose');
+const lbPrev  = document.getElementById('lbPrev');
+const lbNext  = document.getElementById('lbNext');
+let lastFocusedEl = null;
+
+function getLightboxFocusable() {
+  return [lbClose, lbPrev, lbNext].filter(el => el && getComputedStyle(el).display !== 'none');
+}
 
 function openLb(idx) {
   cur = idx;
+  lastFocusedEl = document.activeElement;
   renderLb();
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
+  (getLightboxFocusable()[0] || lb).focus();
 }
 function closeLb() {
   lb.classList.remove('open');
   document.body.style.overflow = '';
+  if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') {
+    lastFocusedEl.focus();
+  }
 }
 function renderLb() {
   const p = PHOTOS[cur];
@@ -1168,12 +1206,34 @@ function renderLb() {
 function prevLb() { cur = (cur - 1 + PHOTOS.length) % PHOTOS.length; renderLb(); }
 function nextLb() { cur = (cur + 1) % PHOTOS.length; renderLb(); }
 
-document.getElementById('lbClose').addEventListener('click', closeLb);
-document.getElementById('lbPrev').addEventListener('click', prevLb);
-document.getElementById('lbNext').addEventListener('click', nextLb);
+lbClose.addEventListener('click', closeLb);
+lbPrev.addEventListener('click', prevLb);
+lbNext.addEventListener('click', nextLb);
 lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
+  if (e.key === 'Tab') {
+    const focusable = getLightboxFocusable();
+    if (!focusable.length) {
+      e.preventDefault();
+      lb.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+      return;
+    }
+
+    if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
   if (e.key === 'Escape')     closeLb();
   if (e.key === 'ArrowLeft')  prevLb();
   if (e.key === 'ArrowRight') nextLb();
