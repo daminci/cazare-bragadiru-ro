@@ -671,7 +671,8 @@
   {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "VacationRental"],
-    "name": "The Ranch House Bragadiru",
+    "name": "The Ranch House Bragadiru Cazare Bragadiru - Casa cu 2 dormitoare",
+    "identifier": "CB-BRAG-01",
     "url": "https://cazarebragadiru.ro/",
     "telephone": "+40726420648",
     "address": {
@@ -681,6 +682,11 @@
       "addressRegion": "Ilfov",
       "postalCode": "077025",
       "addressCountry": "RO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.37745514935348, 
+      "longitude": 25.97954582102981
     },
     "image": [
       "https://cazarebragadiru.ro/images/hero.jpg",
@@ -705,7 +711,59 @@
       "bestRating": "10",
       "worstRating": "1",
       "reviewCount": "2"
+    },
+    "containsPlace": [
+    {
+      "@type": "Accommodation",
+      "name": "Dormitor matrimonial",
+      "description": "Dormitor matrimonial cu baie proprie. Dotat cu pat dublu și aer condiționat.",
+      "bed": {
+        "@type": "BedDetails",
+        "typeOfBed": "DoubleBed",
+        "numberOfBeds": 1
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Baie proprie" },
+        { "@type": "LocationFeatureSpecification", "name": "Aer condiționat" }
+      ]
+    },
+    {
+      "@type": "Accommodation",
+      "name": "Dormitor secundar",
+      "description": "Dormitor cu pat dublu, potrivit pentru 2 persoane.",
+      "bed": {
+        "@type": "BedDetails",
+        "typeOfBed": "DoubleBed",
+        "numberOfBeds": 1
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Aer condiționat (unitate comună în casă)" }
+      ]
+    },
+    {
+      "@type": "Accommodation",
+      "name": "Living room",
+      "description": "Living spațios cu canapea extensibilă pentru 2 persoane.",
+      "bed": {
+        "@type": "BedDetails",
+        "typeOfBed": "SofaBed",
+        "numberOfBeds": 1
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Canapea extensibilă" }
+      ]
+    },
+    {
+      "@type": "Place",
+      "name": "Băi",
+      "description": "Casa include 2 băi moderne, una dintre ele fiind în dormitorul matrimonial."
+    },
+    {
+      "@type": "Place",
+      "name": "Sistem de climatizare",
+      "description": "Proprietatea este dotată cu 3 unități de aer condiționat."
     }
+  ]
   }
   </script>
 
