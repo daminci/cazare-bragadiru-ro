@@ -1059,66 +1059,23 @@
       "worstRating": "1",
       "reviewCount": "2"
     },
-    "containsPlace": [
-    {
+    "containsPlace": {
       "@type": "Accommodation",
-      "name": "Dormitor matrimonial",
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 2,
-        "maxValue": 2,
-        "unitCode": "C62"
-      },
-      "description": "Dormitor matrimonial cu baie proprie. Dotat cu pat dublu și aer condiționat.",
-      "bed": {
+      "additionalType": "EntirePlace",
+      "bed": [{
         "@type": "BedDetails",
-        "typeOfBed": "DoubleBed",
-        "numberOfBeds": 1
+        "numberOfBeds" : 2,
+        "typeOfBed": "Queen"
       },
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Baie proprie" },
-        { "@type": "LocationFeatureSpecification", "name": "Aer condiționat" }
-      ]
-    },
-    {
-      "@type": "Accommodation",
-      "name": "Dormitor secundar",
-      "description": "Dormitor cu pat dublu, potrivit pentru 2 persoane.",
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 2,
-        "maxValue": 2,
-        "unitCode": "C62"
-      },
-      "bed": {
+      {
         "@type": "BedDetails",
-        "typeOfBed": "DoubleBed",
-        "numberOfBeds": 1
-      },
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Aer condiționat (unitate comună în casă)" }
-      ]
-    },
-    {
-      "@type": "Accommodation",
-      "name": "Living room",
-      "description": "Living spațios cu canapea extensibilă pentru 2 persoane.",
-      "occupancy": {
+        "numberOfBeds" : 1,
+        "typeOfBed": "Single"
+      }],
+     "occupancy": {
         "@type": "QuantitativeValue",
-        "value": 2,
-        "maxValue": 2,
-        "unitCode": "C62"
-      },
-      "bed": {
-        "@type": "BedDetails",
-        "typeOfBed": "SofaBed",
-        "numberOfBeds": 1
-      },
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Canapea extensibilă" }
-      ]
-    }
-  ]
+        "value" : 6
+      }
   }
   </script>
 
